@@ -50,12 +50,15 @@ public class Time extends Board
         if(timer==0){
             timer=60;
             if(Greenfoot.getRandomNumber(50)%15==3){
-                getWorld().addObject(new Morebomb(),323,324);
+                if(getWorld().getObjects(Morebomb.class).size()==0)
+                    getWorld().addObject(new Morebomb(),323,324);
             }
             if(Greenfoot.getRandomNumber(50)%15==14){
+                if(getWorld().getObjects(Movefaster.class).size()==0)
                 getWorld().addObject(new Movefaster(),425,325);
             }
             if(Greenfoot.getRandomNumber(50)%15==2){
+                if(getWorld().getObjects(Live.class).size()==0)
                 getWorld().addObject(new Live(),528,325);
             }
         }
