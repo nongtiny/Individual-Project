@@ -17,7 +17,7 @@ public class Bomberman extends Actor
     int movementCounter = 1;
     String picImage="";
     private ArrayList<Bomb> bombs = new ArrayList<Bomb>();
-    public static int bombNums=1,s=2;
+    public static int bombNums=1,s=3;
     public Bomberman(){
 
     }
@@ -73,7 +73,7 @@ public class Bomberman extends Actor
         }
         if(Greenfoot.isKeyDown("space")){
             setLocation(x,y);
-            if(bombs.size() < bombNums){
+            if(bombs.size() < Bomberman.bombNums){
                 bombs.add(new Bomb());
                 getWorld().addObject(bombs.get(bombs.size()- 1), getX(), getY());
             }
@@ -109,9 +109,6 @@ public class Bomberman extends Actor
     }
 
 
-    public void bombNumUpgrade(){
-        bombNums++;
-    }
 
     public void speedUpgrade(){
         s++;

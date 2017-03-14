@@ -20,10 +20,11 @@ public class NmWorld extends World
         set();
     }
      public void act(){
-        if(getObjects(Bomberman.class).size() == 0){
+        if(getObjects(Bomberman.class).size() == 0&&getObjects(Fire.class).size() == 0){
              addObject(new Bomberman(),121,126);
         }
         if(getObjects(Monster.class).size() == 0){
+            Greenfoot.playSound("win.wav");
                  Greenfoot.setWorld(new WinWorld());
         }
     }

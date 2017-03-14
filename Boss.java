@@ -16,7 +16,7 @@ public class Boss extends Monster
      */
     int x;
     int y;
-    private int live = 256;
+    private int live = 200;
     public void act() 
     {
         dead();
@@ -54,14 +54,14 @@ public class Boss extends Monster
     }
     
     public void kills(){
-        Actor actor = getOneObjectAtOffset(0, 0, Fire.class);
-        if (actor != null){
+       
+        if (isTouching(Fire.class)){
             live--;
-            if(live==192)
+            if(live==150)
                 setImage("boss2.png");
-            if(live==128)
+            if(live==100)
                 setImage("boss3.png");
-            if(live==64)
+            if(live==50)
                 setImage("boss4.png");
             if(live==0){
                 World world;

@@ -32,15 +32,7 @@ public class Time extends Board
         if(x<0){
             x=59;
             y--;
-            if(Greenfoot.getRandomNumber(3)==3){
-                getWorld().addObject(new Morebomb(),474,332);
-            }
-            if(Greenfoot.getRandomNumber(3)==1){
-                getWorld().addObject(new Movefaster(),474,332);
-            }
-            if(Greenfoot.getRandomNumber(3)==2){
-                getWorld().addObject(new Live(),474,332);
-            }
+            
             if (getWorld() instanceof EzWorld){
                 getWorld().addObject(new Wtf(),720,96);
             }
@@ -57,15 +49,32 @@ public class Time extends Board
         }
         if(timer==0){
             timer=60;
+            if(Greenfoot.getRandomNumber(50)%15==3){
+                getWorld().addObject(new Morebomb(),323,324);
+            }
+            if(Greenfoot.getRandomNumber(50)%15==14){
+                getWorld().addObject(new Movefaster(),425,325);
+            }
+            if(Greenfoot.getRandomNumber(50)%15==2){
+                getWorld().addObject(new Live(),528,325);
+            }
         }
         if(y==0&&x<0){
             Greenfoot.playSound("timeup.wav");
             if(getWorld().getObjects(Monster.class).size() != 0){
                 Greenfoot.setWorld(new LoseWorld());
                 Greenfoot.playSound("lose.wav");
+                LiveLeft.live=2;
+                Score.score=0;
+                Bomberman.s=3;
+                Bomberman.bombNums=1;
             }else{
                 Greenfoot.setWorld(new WinWorld());
                 Greenfoot.playSound("win.wav");
+                LiveLeft.live=2;
+                Score.score=0;
+                Bomberman.s=3;
+                Bomberman.bombNums=1;
             }
         }
         setImage(new GreenfootImage(""+y+":"+sec,20, Color.WHITE, Color.BLACK));

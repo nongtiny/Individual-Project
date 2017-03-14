@@ -14,11 +14,12 @@ public class LiveLeft extends Board
      */
     public static int live=2; 
     public LiveLeft(){
-        setImage(new GreenfootImage("2",20, Color.WHITE, Color.BLACK));
+        setImage(new GreenfootImage("3",20, Color.WHITE, Color.BLACK));
     }
     public void act() 
     {
         if(live<0){
+             Greenfoot.playSound("lose.wav");
             Greenfoot.setWorld(new LoseWorld());
         }
          setImage(new GreenfootImage(""+LiveLeft.live,20, Color.WHITE, Color.BLACK));

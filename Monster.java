@@ -20,8 +20,7 @@ public class Monster extends Actor
     
     
     public void kill(){
-        Actor actor = getOneObjectAtOffset(0, 0, Fire.class);
-        if (actor != null){
+        if (isTouching(Fire.class)){
             World world;
             world = getWorld();
             world.removeObject(this);

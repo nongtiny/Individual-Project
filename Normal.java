@@ -18,10 +18,7 @@ public class Normal extends Button
         {
             Greenfoot.playSound("reset.wav");
             Greenfoot.setWorld(new NmWorld());;
-            LiveLeft.live=2;
-            Score.score=0;
-            Bomberman.s=2;
-            Bomberman.bombNums=1;
+           
         }
     }    
 }

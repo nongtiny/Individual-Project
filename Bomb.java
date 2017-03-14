@@ -63,7 +63,7 @@ public class Bomb extends Actor
            getWorld().addObject(new Fire(),x-length*i,y);
            getWorld().addObject(new Fire(),x,y+length*i);
            getWorld().addObject(new Fire(),x,y-length*i);
-            
+           getWorld().addObject(new Fire(),x,y-length*i);
         }
         
     }

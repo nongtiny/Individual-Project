@@ -20,7 +20,7 @@ public class Restart extends Button
                 Greenfoot.setWorld(new NmWorld());
                 LiveLeft.live=2;
                 Score.score=0;
-                Bomberman.s=2;
+                Bomberman.s=3;
                 Bomberman.bombNums=1;
             }
         }
@@ -31,7 +31,7 @@ public class Restart extends Button
                 Greenfoot.setWorld(new EzWorld());
                 LiveLeft.live=2;
                 Score.score=0;
-                Bomberman.s=2;
+                Bomberman.s=3;
                 Bomberman.bombNums=1;
             }
         }
@@ -42,7 +42,7 @@ public class Restart extends Button
                 Greenfoot.setWorld(new HardWorld());
                 LiveLeft.live=2;
                 Score.score=0;
-                Bomberman.s=2;
+                Bomberman.s=3;
                 Bomberman.bombNums=1;
             }
         }

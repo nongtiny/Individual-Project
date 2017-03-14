@@ -18,6 +18,10 @@ public class Backtomenu extends Button
         {
             Greenfoot.playSound("reset.wav");
             Greenfoot.setWorld(new Mainmenu());
+            LiveLeft.live=3;
+            Score.score=0;
+            Bomberman.s=3;
+            Bomberman.bombNums=1;
         }
     }    
 }

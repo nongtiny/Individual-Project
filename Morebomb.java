@@ -21,7 +21,7 @@ public class Morebomb extends PowerUp
         Bomberman man = new Bomberman();
         ArrayList<Bomberman> objs = (ArrayList<Bomberman>) getIntersectingObjects(Bomberman.class);
         if(objs.size() > 0){
-            man.bombNumUpgrade();
+            Bomberman.bombNums++;
             Greenfoot.playSound("special.wav");
             getWorld().removeObject(this);
         }
