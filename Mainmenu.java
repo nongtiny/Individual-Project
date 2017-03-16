@@ -14,7 +14,7 @@ public class Mainmenu extends World
      * 
      * 
      */
-    
+    GreenfootSound s = new GreenfootSound("title.wav");
     public Mainmenu()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -23,6 +23,9 @@ public class Mainmenu extends World
         set();
     }
     
+    public void act(){
+        s.play();
+    }
     public void set(){
         
         addObject(new Banner(),getWidth()/2,600);

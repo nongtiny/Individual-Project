@@ -13,6 +13,7 @@ public class LoseWorld extends World
      * Constructor for objects of class LoseWorld.
      * 
      */
+    GreenfootSound s = new GreenfootSound("lose.wav");
     
     public LoseWorld()
     {    
@@ -23,5 +24,7 @@ public class LoseWorld extends World
        addObject(new Backtomenu(),476,282);     
     }
     
-    
+    public void act(){
+        s.play();
+    }
 }

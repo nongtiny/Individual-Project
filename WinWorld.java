@@ -13,6 +13,7 @@ public class WinWorld extends World
      * Constructor for objects of class WinWorld.
      * 
      */
+    GreenfootSound s = new GreenfootSound("win.wav");
     int frameTimer=100;
     public WinWorld()
     {    
@@ -22,7 +23,7 @@ public class WinWorld extends World
         addObject(new Backtomenu(),470,400);     
     }
     public void act(){
-        
+        s.play();
         animation();
     }
      public void animation(){
